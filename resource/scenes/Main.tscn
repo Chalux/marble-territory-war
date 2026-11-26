@@ -1,0 +1,181 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://src/Presentation/Main.cs" id="1"]
+[ext_resource type="Resource" path="res://resource/config/default.tres" id="2"]
+[ext_resource type="PackedScene" path="res://resource/scenes/PinballBoard.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://resource/scenes/Battlefield.tscn" id="4"]
+[ext_resource type="Shader" path="res://resource/shaders/battlefield.gdshader" id="5"]
+[ext_resource type="Shader" path="res://resource/shaders/optical_glow.gdshader" id="7"]
+
+[ext_resource type="PackedScene" path="res://resource/scenes/Results.tscn" id="6"]
+[sub_resource type="ShaderMaterial" id="Background"]
+shader = ExtResource("5")
+
+[sub_resource type="ShaderMaterial" id="OpticalGlow"]
+shader = ExtResource("7")
+
+[sub_resource type="SystemFont" id="ChineseFont"]
+font_names = PackedStringArray("Microsoft YaHei", "Noto Sans CJK SC", "sans-serif")
+
+[sub_resource type="Theme" id="UITheme"]
+default_font = SubResource("ChineseFont")
+default_font_size = 18
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1")
+Config = ExtResource("2")
+
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("Background")
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+
+[node name="PinballBoard" parent="." instance=ExtResource("3")]
+
+[node name="Battlefield" parent="." instance=ExtResource("4")]
+
+[node name="OpticalGlow" type="ColorRect" parent="."]
+material = SubResource("OpticalGlow")
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+theme = SubResource("UITheme")
+
+[node name="HeaderBackdrop" type="ColorRect" parent="HUD"]
+offset_left = 1010.0
+offset_top = 4.0
+offset_right = 1590.0
+offset_bottom = 164.0
+mouse_filter = 2
+color = Color(0.015, 0.03, 0.05, 0.92)
+
+[node name="FooterBackdrop" type="ColorRect" parent="HUD"]
+offset_left = 1060.0
+offset_top = 826.0
+offset_right = 1540.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.015, 0.03, 0.05, 0.88)
+
+[node name="Title" type="Label" parent="HUD"]
+offset_left = 1090.0
+offset_top = 12.0
+offset_right = 1510.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.65, 0.76, 0.83, 1)
+theme_override_font_sizes/font_size = 28
+text = "小 球 领 土 战 争"
+horizontal_alignment = 1
+
+[node name="Stage" type="Label" parent="HUD"]
+offset_left = 1010.0
+offset_top = 82.0
+offset_right = 1590.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0.37, 0.49, 0.57, 1)
+theme_override_font_sizes/font_size = 16
+text = "自动观战 · 五类能力已启用"
+horizontal_alignment = 1
+
+[node name="Clock" type="Label" parent="HUD"]
+offset_left = 1090.0
+offset_top = 48.0
+offset_right = 1510.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="Pause" type="Button" parent="HUD"]
+offset_left = 1090.0
+offset_top = 988.0
+offset_right = 1240.0
+offset_bottom = 1032.0
+focus_mode = 0
+text = "暂停  [空格]"
+
+[node name="Speed" type="Button" parent="HUD"]
+offset_left = 1250.0
+offset_top = 988.0
+offset_right = 1370.0
+offset_bottom = 1032.0
+focus_mode = 0
+text = "1×  [Tab]"
+
+[node name="Reset" type="Button" parent="HUD"]
+offset_left = 1380.0
+offset_top = 988.0
+offset_right = 1510.0
+offset_bottom = 1032.0
+focus_mode = 0
+text = "重置  [R]"
+
+[node name="Particles" type="CheckButton" parent="HUD"]
+offset_left = 1520.0
+offset_top = 988.0
+offset_right = 1760.0
+offset_bottom = 1032.0
+focus_mode = 0
+button_pressed = true
+text = "粒子效果 [P]"
+
+[node name="Status" type="Label" parent="HUD"]
+offset_left = 1000.0
+offset_top = 1040.0
+offset_right = 1600.0
+offset_bottom = 1073.0
+theme_override_colors/font_color = Color(0.45, 0.59, 0.68, 1)
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="Events" type="Label" parent="HUD"]
+offset_left = 1140.0
+offset_top = 839.0
+offset_right = 1500.0
+offset_bottom = 978.0
+theme_override_colors/font_color = Color(0.52, 0.65, 0.72, 1)
+theme_override_font_sizes/font_size = 17
+
+[node name="ExperienceNote" type="Label" parent="HUD"]
+offset_left = 1050.0
+offset_top = 132.0
+offset_right = 1550.0
+offset_bottom = 156.0
+theme_override_colors/font_color = Color(0.32, 0.43, 0.52, 1)
+theme_override_font_sizes/font_size = 14
+text = "每色一次复活 · 亡语结算后进入 15 秒终盘"
+horizontal_alignment = 1
+
+
+[node name="NewSeed" type="Button" parent="HUD"]
+offset_left = 1100.0
+offset_top = 170.0
+offset_right = 1275.0
+offset_bottom = 208.0
+focus_mode = 0
+text = "换种子新对局"
+[node name="Report" type="Button" parent="HUD"]
+offset_left = 1300.0
+offset_top = 170.0
+offset_right = 1480.0
+offset_bottom = 208.0
+focus_mode = 0
+text = "查看战报"
+[node name="Results" parent="HUD" instance=ExtResource("6")]
+
+[node name="ControlsHint" type="Label" parent="HUD"]
+offset_left = 289.0
+offset_top = 1046.0
+offset_right = 415.0
+offset_bottom = 1064.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.5, 0.54, 0.57, 0.8)
+text = "H · 控制面板   P · 粒子"
+horizontal_alignment = 1

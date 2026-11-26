@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Font" path="res://resource/reference_font.tres" id="Font"]
+
+[ext_resource type="Script" path="res://src/Presentation/FactionCoreView.cs" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="ReservePlate"]
+content_margin_left = 28.0
+content_margin_right = 3.0
+bg_color = Color(0.01, 0.02, 0.035, 0.38)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.65, 0.75, 0.82, 0.4)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_left = 4
+corner_radius_bottom_right = 4
+
+
+[node name="FactionBase" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Values" type="Label" parent="."]
+theme_override_fonts/font = ExtResource("Font")
+offset_left = -35.0
+offset_top = -43.0
+offset_right = 90.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.95)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_colors/font_outline_color = Color(0.01, 0.02, 0.03, 0.65)
+text = "护盾  0"
+horizontal_alignment = 1
+
+[node name="Reserve" type="Label" parent="."]
+theme_override_fonts/font = ExtResource("Font")
+offset_left = -80.0
+offset_top = 14.0
+offset_right = 80.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 22
+theme_override_constants/outline_size = 3
+theme_override_colors/font_outline_color = Color(0.01, 0.02, 0.03, 0.8)
+theme_override_styles/normal = SubResource("ReservePlate")
+text = "机枪  0"
+horizontal_alignment = 1

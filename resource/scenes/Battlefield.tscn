@@ -1,0 +1,267 @@
+[gd_scene load_steps=14 format=3]
+[ext_resource type="Script" path="res://src/Presentation/Battlefield.cs" id="1"]
+[ext_resource type="PackedScene" path="res://resource/scenes/FactionBase.tscn" id="2"]
+[ext_resource type="Shader" path="res://resource/shaders/territory.gdshader" id="3"]
+[ext_resource type="PackedScene" path="res://resource/scenes/BigBall.tscn" id="4"]
+[ext_resource type="Shader" path="res://resource/shaders/shield.gdshader" id="5"]
+[ext_resource type="Script" path="res://src/Presentation/TerritoryFlowView.cs" id="6"]
+[ext_resource type="Font" path="res://resource/reference_font.tres" id="ReferenceFont"]
+[sub_resource type="CanvasItemMaterial" id="FlowAdditive"]
+blend_mode = 1
+[sub_resource type="ShaderMaterial" id="Shield0"]
+shader = ExtResource("5")
+[sub_resource type="ShaderMaterial" id="Shield1"]
+shader = ExtResource("5")
+[sub_resource type="ShaderMaterial" id="Shield2"]
+shader = ExtResource("5")
+[sub_resource type="ShaderMaterial" id="Shield3"]
+shader = ExtResource("5")
+[sub_resource type="ShaderMaterial" id="TerritoryMaterial"]
+shader = ExtResource("3")
+[node name="Battlefield" type="Node2D"]
+script = ExtResource("1")
+[node name="Territory" type="ColorRect" parent="."]
+show_behind_parent = true
+material = SubResource("TerritoryMaterial")
+offset_left = 760.0
+offset_top = 20.0
+offset_right = 1840.0
+offset_bottom = 1060.0
+mouse_filter = 2
+[node name="TerritoryFlow" type="Node2D" parent="."]
+script = ExtResource("6")
+material = SubResource("FlowAdditive")
+[node name="Shield0" type="ColorRect" parent="."]
+show_behind_parent = true
+material = SubResource("Shield0")
+mouse_filter = 2
+[node name="Shield1" type="ColorRect" parent="."]
+show_behind_parent = true
+material = SubResource("Shield1")
+mouse_filter = 2
+[node name="Shield2" type="ColorRect" parent="."]
+show_behind_parent = true
+material = SubResource("Shield2")
+mouse_filter = 2
+[node name="Shield3" type="ColorRect" parent="."]
+show_behind_parent = true
+material = SubResource("Shield3")
+mouse_filter = 2
+[node name="Base0" parent="." instance=ExtResource("2")]
+position = Vector2(900, 140)
+
+[node name="Base1" parent="." instance=ExtResource("2")]
+position = Vector2(1700, 140)
+
+[node name="Base2" parent="." instance=ExtResource("2")]
+position = Vector2(900, 940)
+
+[node name="Base3" parent="." instance=ExtResource("2")]
+position = Vector2(1700, 940)
+
+[node name="Experience0" type="Label" parent="."]
+offset_left = 681.0
+offset_top = 39.0
+offset_right = 759.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("ReferenceFont")
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="Percentage0" type="Label" parent="."]
+offset_left = 681.0
+offset_top = 14.0
+offset_right = 759.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("ReferenceFont")
+theme_override_font_sizes/font_size = 17
+horizontal_alignment = 1
+mouse_filter = 2
+[node name="Experience1" type="Label" parent="."]
+offset_left = 1840.0
+offset_top = 39.0
+offset_right = 1918.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("ReferenceFont")
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="Percentage1" type="Label" parent="."]
+offset_left = 1840.0
+offset_top = 14.0
+offset_right = 1918.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("ReferenceFont")
+theme_override_font_sizes/font_size = 17
+horizontal_alignment = 1
+mouse_filter = 2
+[node name="Experience2" type="Label" parent="."]
+offset_left = 681.0
+offset_top = 1027.0
+offset_right = 759.0
+offset_bottom = 1069.0
+theme_override_fonts/font = ExtResource("ReferenceFont")
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="Percentage2" type="Label" parent="."]
+offset_left = 681.0
+offset_top = 1000.0
+offset_right = 759.0
+offset_bottom = 1024.0
+theme_override_fonts/font = ExtResource("ReferenceFont")
+theme_override_font_sizes/font_size = 17
+horizontal_alignment = 1
+mouse_filter = 2
+[node name="Experience3" type="Label" parent="."]
+offset_left = 1840.0
+offset_top = 1027.0
+offset_right = 1918.0
+offset_bottom = 1069.0
+theme_override_fonts/font = ExtResource("ReferenceFont")
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="Percentage3" type="Label" parent="."]
+offset_left = 1840.0
+offset_top = 1000.0
+offset_right = 1918.0
+offset_bottom = 1024.0
+theme_override_fonts/font = ExtResource("ReferenceFont")
+theme_override_font_sizes/font_size = 17
+horizontal_alignment = 1
+mouse_filter = 2
+[node name="BigBallPool" type="Node2D" parent="."]
+
+[node name="Ball00" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball01" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball02" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball03" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball04" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball05" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball06" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball07" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball08" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball09" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball10" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball11" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball12" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball13" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball14" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball15" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball16" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball17" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball18" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball19" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball20" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball21" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball22" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball23" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball24" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball25" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball26" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball27" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball28" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball29" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball30" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball31" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball32" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball33" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball34" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball35" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball36" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball37" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball38" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball39" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball40" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball41" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball42" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball43" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball44" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball45" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball46" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball47" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball48" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball49" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball50" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball51" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball52" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball53" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball54" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball55" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball56" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball57" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball58" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball59" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball60" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball61" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball62" parent="BigBallPool" instance=ExtResource("4")]
+
+[node name="Ball63" parent="BigBallPool" instance=ExtResource("4")]
+

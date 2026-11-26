@@ -1,0 +1,445 @@
+{
+  "schema": 1,
+  "seed": 1701,
+  "seconds": 172.1916666666744,
+  "phase": "Finished",
+  "winners": [
+    1
+  ],
+  "parameters": {
+    "Seed": 1701,
+    "Gravity": 340,
+    "LiftForce": 690,
+    "Restitution": 0.88,
+    "LaunchInterval": 0.24,
+    "LaunchSpeed": 225,
+    "ConveyorSpeed": 13,
+    "RadiusBase": 7,
+    "RadiusValueFactor": 0.1,
+    "MassValueFactor": 0.34,
+    "TimeScale": 900,
+    "BumperKick": 42,
+    "InitialTerritoryRadius": 64,
+    "PaintCostPerArea": 0.0032,
+    "PaintCostTimeScale": 900,
+    "ExperiencePerAreaSecond": 0.008,
+    "ProjectileSpeed": 360,
+    "ProjectileRadius": 2,
+    "ProjectilePaintRadius": 4,
+    "GunInterval": 0.12,
+    "GunBaseConsumption": 1,
+    "GunReserveConsumption": 0.025,
+    "BaseRotationSpeed": 0.4,
+    "StormProjectilesPerWave": 48,
+    "StormBaseProjectileValue": 16,
+    "StormWaveInterval": 0.18,
+    "ShieldBaseRadius": 18,
+    "ShieldLogRadius": 6,
+    "ShieldMaxRadius": 128,
+    "BigBallSpeed": 95,
+    "BigBallRadiusBase": 8,
+    "BigBallRadiusLog": 2,
+    "BigBallMaxRadius": 50,
+    "ProjectileImpulse": 9,
+    "BigBallRestitution": 1,
+    "BigBallShieldTransferRatio": 0.8,
+    "SniperSpeed": 720,
+    "SniperLifetime": 9,
+    "SniperFragments": 8,
+    "FragmentLifetime": 8,
+    "FragmentSpread": 1.4,
+    "FinaleReserveStorm": true
+  },
+  "factions": [
+    {
+      "name": "\u7EA2\u65B9",
+      "cells": 11124,
+      "alive": false,
+      "eliminatedAt": 146.02500000003153,
+      "revivals": 1,
+      "level": 0,
+      "extraBalls": 0,
+      "experience": 109690.59333333078,
+      "survival": 146.0166666666982,
+      "areaTime": 13711324.166666677,
+      "invested": [
+        4096,
+        524288,
+        134217728,
+        0,
+        1,
+        4096,
+        0
+      ],
+      "damage": [
+        0,
+        365845.8323929161,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "paintSpent": 26792.173122223685
+    },
+    {
+      "name": "\u7EFF\u65B9",
+      "cells": 32680,
+      "alive": false,
+      "eliminatedAt": 106.45000000003078,
+      "revivals": 1,
+      "level": 0,
+      "extraBalls": 0,
+      "experience": 15624.258333330548,
+      "survival": 106.44166666669744,
+      "areaTime": 1953032.2916665492,
+      "invested": [
+        274877906944,
+        0,
+        64,
+        264,
+        0,
+        274877906944,
+        0
+      ],
+      "damage": [
+        672395019.7049047,
+        0,
+        0,
+        0,
+        0,
+        672395019.7049047,
+        0
+      ],
+      "paintSpent": 26158.168116297144
+    },
+    {
+      "name": "\u84DD\u65B9",
+      "cells": 0,
+      "alive": false,
+      "eliminatedAt": 132.67500000004367,
+      "revivals": 1,
+      "level": 1,
+      "extraBalls": 1,
+      "experience": 172412.92500000028,
+      "survival": 132.66666666671034,
+      "areaTime": 21551615.625000156,
+      "invested": [
+        800,
+        2,
+        1026,
+        131141,
+        1,
+        65,
+        0
+      ],
+      "damage": [
+        47.70616296295661,
+        0,
+        0,
+        129136.6402732619,
+        0,
+        0,
+        0
+      ],
+      "paintSpent": 2135.5285192592914
+    },
+    {
+      "name": "\u9EC4\u65B9",
+      "cells": 1124,
+      "alive": false,
+      "eliminatedAt": 146.45000000003114,
+      "revivals": 1,
+      "level": 2,
+      "extraBalls": 3,
+      "experience": 527949.3966666621,
+      "survival": 146.4416666666978,
+      "areaTime": 65993674.5833334,
+      "invested": [
+        4240,
+        258,
+        1081344,
+        524800,
+        442626,
+        311552,
+        0
+      ],
+      "damage": [
+        1044.1319333333336,
+        14.497772543290782,
+        0,
+        419377.6204491849,
+        34023.37443512077,
+        0,
+        0
+      ],
+      "paintSpent": 4999.08113333339
+    }
+  ],
+  "redemptions": [
+    {
+      "Time": 4.308333333333337,
+      "BallId": 7,
+      "Faction": 3,
+      "ability": "Gun",
+      "Value": 1,
+      "IsDeath": false
+    },
+    {
+      "Time": 5.591666666666734,
+      "BallId": 3,
+      "Faction": 3,
+      "ability": "Sniper",
+      "Value": 1,
+      "IsDeath": false
+    },
+    {
+      "Time": 6.51666666666678,
+      "BallId": 0,
+      "Faction": 0,
+      "ability": "Sniper",
+      "Value": 1,
+      "IsDeath": false
+    },
+    {
+      "Time": 7.708333333333506,
+      "BallId": 6,
+      "Faction": 2,
+      "ability": "BigBall",
+      "Value": 4,
+      "IsDeath": false
+    },
+    {
+      "Time": 12.283333333333276,
+      "BallId": 1,
+      "Faction": 1,
+      "ability": "Shield",
+      "Value": 64,
+      "IsDeath": false
+    },
+    {
+      "Time": 20.716666666666132,
+      "BallId": 5,
+      "Faction": 1,
+      "ability": "BigBall",
+      "Value": 8,
+      "IsDeath": false
+    },
+    {
+      "Time": 25.183333333332545,
+      "BallId": 6,
+      "Faction": 2,
+      "ability": "Storm",
+      "Value": 256,
+      "IsDeath": false
+    },
+    {
+      "Time": 37.70833333333184,
+      "BallId": 7,
+      "Faction": 3,
+      "ability": "Shield",
+      "Value": 1048576,
+      "IsDeath": false
+    },
+    {
+      "Time": 37.74166666666517,
+      "BallId": 1,
+      "Faction": 1,
+      "ability": "BigBall",
+      "Value": 256,
+      "IsDeath": false
+    },
+    {
+      "Time": 42.891666666664875,
+      "BallId": 2,
+      "Faction": 2,
+      "ability": "BigBall",
+      "Value": 131072,
+      "IsDeath": false
+    },
+    {
+      "Time": 46.32499999999801,
+      "BallId": 3,
+      "Faction": 3,
+      "ability": "Storm",
+      "Value": 4096,
+      "IsDeath": false
+    },
+    {
+      "Time": 47.54166666666461,
+      "BallId": 2,
+      "Faction": 2,
+      "ability": "Gun",
+      "Value": 2,
+      "IsDeath": false
+    },
+    {
+      "Time": 58.45833333333066,
+      "BallId": 2,
+      "Faction": 2,
+      "ability": "Storm",
+      "Value": 32,
+      "IsDeath": false
+    },
+    {
+      "Time": 62.91666666666374,
+      "BallId": 3,
+      "Faction": 3,
+      "ability": "Storm",
+      "Value": 16,
+      "IsDeath": false
+    },
+    {
+      "Time": 66.77499999999921,
+      "BallId": 2,
+      "Faction": 2,
+      "ability": "Shield",
+      "Value": 2,
+      "IsDeath": false
+    },
+    {
+      "Time": 82.3916666666783,
+      "BallId": 4,
+      "Faction": 3,
+      "ability": "Gun",
+      "Value": 256,
+      "IsDeath": false
+    },
+    {
+      "Time": 85.00833333334705,
+      "BallId": 4,
+      "Faction": 3,
+      "ability": "Sniper",
+      "Value": 1,
+      "IsDeath": false
+    },
+    {
+      "Time": 87.77500000001592,
+      "BallId": 7,
+      "Faction": 3,
+      "ability": "Shield",
+      "Value": 16384,
+      "IsDeath": false
+    },
+    {
+      "Time": 88.77500000001672,
+      "BallId": 0,
+      "Faction": 0,
+      "ability": "Shield",
+      "Value": 134217728,
+      "IsDeath": false
+    },
+    {
+      "Time": 94.50833333335461,
+      "BallId": 2,
+      "Faction": 2,
+      "ability": "Shield",
+      "Value": 1024,
+      "IsDeath": false
+    },
+    {
+      "Time": 104.31666666669575,
+      "BallId": 5,
+      "Faction": 3,
+      "ability": "Storm",
+      "Value": 128,
+      "IsDeath": false
+    },
+    {
+      "Time": 107.41666666669822,
+      "BallId": 5,
+      "Faction": 3,
+      "ability": "Gun",
+      "Value": 1,
+      "IsDeath": false
+    },
+    {
+      "Time": 110.52500000003403,
+      "BallId": 3,
+      "Faction": 3,
+      "ability": "BigBall",
+      "Value": 524288,
+      "IsDeath": false
+    },
+    {
+      "Time": 120.11666666670833,
+      "BallId": 7,
+      "Faction": 3,
+      "ability": "Sniper",
+      "Value": 131072,
+      "IsDeath": false
+    },
+    {
+      "Time": 122.79166666671046,
+      "BallId": 2,
+      "Faction": 2,
+      "ability": "Storm",
+      "Value": 512,
+      "IsDeath": false
+    },
+    {
+      "Time": 124.50833333337849,
+      "BallId": 0,
+      "Faction": 0,
+      "ability": "Gun",
+      "Value": 524288,
+      "IsDeath": false
+    },
+    {
+      "Time": 126.6166666667135,
+      "BallId": 2,
+      "Faction": 2,
+      "ability": "Sniper",
+      "Value": 1,
+      "IsDeath": false
+    },
+    {
+      "Time": 133.66666666670943,
+      "BallId": 3,
+      "Faction": 3,
+      "ability": "BigBall",
+      "Value": 512,
+      "IsDeath": false
+    },
+    {
+      "Time": 136.8583333333732,
+      "BallId": 2,
+      "Faction": 2,
+      "ability": "BigBall",
+      "Value": 65,
+      "IsDeath": true
+    },
+    {
+      "Time": 143.7833333333669,
+      "BallId": 1,
+      "Faction": 1,
+      "ability": "Storm",
+      "Value": 274877906944,
+      "IsDeath": true
+    },
+    {
+      "Time": 144.08333333336662,
+      "BallId": 5,
+      "Faction": 3,
+      "ability": "Shield",
+      "Value": 16384,
+      "IsDeath": false
+    },
+    {
+      "Time": 155.49166666668958,
+      "BallId": 0,
+      "Faction": 0,
+      "ability": "Storm",
+      "Value": 4096,
+      "IsDeath": true
+    },
+    {
+      "Time": 157.19166666668804,
+      "BallId": 3,
+      "Faction": 3,
+      "ability": "Sniper",
+      "Value": 311552,
+      "IsDeath": true
+    }
+  ]
+}

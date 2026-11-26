@@ -1,0 +1,15 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# .NET build output
+bin/
+obj/
+*.user
+
+# Local logs / diagnostic dumps
+*.log
+*.log.err
+
+# Large reference video (kept locally, too big for git)
+*.mp4
